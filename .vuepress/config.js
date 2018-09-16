@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Learning',
     description: '',
-    base: '/learning/',
+    base: '/notes/',
     themeConfig: {
         sidebar: [{
                 title: 'jQuery',
