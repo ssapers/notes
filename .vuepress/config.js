@@ -28,7 +28,7 @@ module.exports = {
                 title: 'Верстка',
                 collapsable: true,
                 children: [
-                    '/Верстка/'
+                    '/верстка/'
                 ]
             },
             {
