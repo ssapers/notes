@@ -1,10 +1,10 @@
-# jQuery-learning
+# Основы JQuery
 
 ## Что такое $()?
-Это метод вызванный в объекте jquery, находящийся в данном пространсте имен, которые он автоматически примимает и возвращает выбор.
+Это метод вызванный в объекте JQuery, находящийся в данном пространсте имен, которые он автоматически примимает и возвращает выбор.
 
 ## Перечислите все известные вам способы получения DOM-элемента.
-$("...") <- любые виды селектров, атрибуты форм (:checker,button...), ссылок(a[href='http://google.com']), указание наследование(.name > li), псевдоклассы селекторов(:first,last...).
+$('...') <- любые виды селектров, атрибуты форм ('*:checker,button...'), ссылок('a[href="http://google.com"]'), указание наследование('.name > li'), псевдоклассы селекторов('*:first,last...').
 
 ## Как объединить выборки (jQuery-коллекции) элементов? 
 К примеру, есть какой-то $activeElement, к нему нужно добавить еще элементы с классом .element, чтобы произвести какие-то действия над объединенной выборкой.
@@ -12,18 +12,23 @@ $("...") <- любые виды селектров, атрибуты форм (:
 const active = $('#activeElement').find('.element')
 ```
 
+
+## Как выбрать все li с атрибутом data-time? Предложите все известные вам способы?
 Есть такая разметка:
 ```html
 <ul class="list" id="time">
-    <li data-time="13:55" class="list__item">Time item 1</li>
-    <li data-time="14:35" class="list__item">Time item 2</li>
-    <li data-time="16:03" class="list__item">Time item 3</li>
+    <li data-time="13:55" class="list__item js-item-list">Time item 1</li>
+    <li data-time="14:35" class="list__item js-item-list">Time item 2</li>
+    <li data-time="16:03" class="list__item js-item-list">Time item 3</li>
 </ul>
 ```
 
-`Как выбрать все li с атрибутом data-time? Предложите все известные вам способы?`
 ```javascript
-$('ul > li[data-time]')  
+const $containerTime = $('#time');
+
+$('ul > li[data-time]');
+$containerTime.find('li[data-time]');
+$containerTime.find('.js-item-list[data-time]');
 ```
 
 ## Как получить DOM-элемент с фокусом ?
@@ -35,7 +40,7 @@ $('ul > li[data-time]')
     <li data-time="16:03" class="list__item">Time item 3</li>
 </ul>
 ```
-Как выбрать все li с атрибутом data-time? Предложите все известные вам способы.`
+Как выбрать все li с атрибутом data-time? Предложите все известные вам способы.
 
 ```javascript
 $('#list').find('li[data-time]');
@@ -46,29 +51,33 @@ $('#list').find('li').filter('[data-time]')
 ## Как получить DOM-элемент с фокусом?
 
 ```javascript
-$('div').focus()
+$('input:focus')
  ```
 
 ## Как проверить, имеет ли элемент фокус?
 
-Добавить вывод в консоль, либо прописать стили(для чего он и используется), вывенсти alert.
+Добавить вывод в консоль, либо прописать стили(для чего он и используется), вывести alert.
+
+```javascript
+$('input').is(':focus')
+ ```
 
 ## Как получить скрытый DOM-элемент?
-Использовать метод show(), чтобы скрыть hide()
+Также как и получить обычный DOM-элемент. При помощи $('...'). Но если этот элемент был создан на ходу, то необходимо искать именно в теле. $('body').find('...')
 
 ## Как выбрать предыдущий/следующий DOM-элемент от найденного?
 
 ```javascript
-$("div").prev();
-$("div").next();  
-$("div").get(-1);
+$('div').prev();
+$('div').next();  
+$('div').get(-1);
 ```
 
 ## Как получить все последующие DOM-элементы от найденного?
 
 ```javascript
-$("div").prevAll();
-$("div").nextAll();
+$('div').prevAll();
+$('div').nextAll();
 ```
 
 ## Как пройтись по элементам массива? 
@@ -80,7 +89,7 @@ $.each( arr, function( index, value ){
     sum += value;
 });
 
-$( "li" ).each( function( index, element ){
+$('li').each( function( index, element ){
     console.log( $( this ).text() );
 });
 ```

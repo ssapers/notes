@@ -35,7 +35,8 @@ module.exports = {
                 title: 'Письма',
                 collapsable: true,
                 children: [
-                    '/email/notes-email'
+                    '/email/notes-email',
+                    '/email/designers-guide'
                 ]
             },
         ]
