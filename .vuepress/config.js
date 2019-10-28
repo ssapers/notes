@@ -18,20 +18,6 @@ module.exports = {
                 ]
             },
             {
-                title: 'Javascript',
-                collapsable: true,
-                children: [
-                    '/js/'
-                ]
-            },
-            {
-                title: 'Верстка',
-                collapsable: true,
-                children: [
-                    '/верстка/'
-                ]
-            },
-            {
                 title: 'Письма',
                 collapsable: true,
                 children: [
