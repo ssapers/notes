@@ -25,6 +25,23 @@ module.exports = {
                     '/email/designers-guide'
                 ]
             },
+            {
+                title: 'Javascript',
+                collapsable: true,
+                children: [
+                    '/javascript/common-tasks.md',
+                    '/javascript/interest-tasks.md'
+                ]
+            },
+            {
+                title: 'Books',
+                collapsable: true,
+                children: [
+                    '/books/main.md',
+                    '/books/grokking-algorithms.md',
+                    '/books/designer-maniac.md'
+                ]
+            },
         ]
     }
 };
