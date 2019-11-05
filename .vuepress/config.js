@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Learning',
+    title: 'Книжечка - v.1',
     description: '',
     base: '/notes/',
     themeConfig: {
@@ -39,7 +39,9 @@ module.exports = {
                 children: [
                     '/books/main.md',
                     '/books/grokking-algorithms.md',
-                    '/books/designer-maniac.md'
+                    '/books/designer-maniac.md',
+                    '/books/project-managment.md',
+                    '/books/information-style.md'
                 ]
             },
         ]
