@@ -5,5 +5,5 @@
  - решенные задачи;
  - статьи;
  - отзывы по книгам.
-<img src="./img.jpg" width="604" style="margin-top: 40px" class="content__image"/>
+<li class="content-background"><img src="./img.jpg" width="604" style="margin-top: 40px" class="content__image"/></li>
 

@@ -14,7 +14,7 @@ $codeBgColor = #282c34
 }
 
 .content__image {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -24,4 +24,15 @@ $codeBgColor = #282c34
 
 h1 {
   z-index 1
+}
+
+li {
+  position: relative;
+  z-index: 1
+}
+
+.content-background {
+  position: static;
+  z-index 0;
+  list-style-type: none;
 }
